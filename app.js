@@ -17,7 +17,7 @@ const makeImages = (shows) => {
     if(result.show.image) {  
       const img = document.createElement('img');
       img.src = result.show.image.medium;
-      img.classList.add("img");
+      img.classList.add("imgClass");
       document.body.append(img);
       img.addEventListener("click", function(e) {
         if(e.target) {
