@@ -4,7 +4,7 @@ form.addEventListener("submit", async function(e) {
     e.preventDefault();
     const searchTerm = form.elements.query.value;
     const config = { params: { q: searchTerm } }
-    const response = await axios.get(` https://api.tvmaze.com/search/shows`, config);
+    const response = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     makeImages(response.data);
     form.elements.query.value = ""; 
   } catch(error) {
@@ -19,6 +19,11 @@ const makeImages = (shows) => {
       img.src = result.show.image.medium;
       img.classList.add("img");
       document.body.append(img);
+      img.addEventListener("click", function(e) {
+        if(e.target) {
+          img.remove();
+        }
+      })
     }
   }
 }
