@@ -2,4 +2,4 @@ Currently learning making requests using Callbacks, Promises and the Fetch API w
 
 In this exercise, I am using AXIOS library.
 
-We retrieve the user input and concatenate to the query string in order to make request. Once we reach the pure data which is an image array, we append them on body.
+We retrieve the user input and concatenate to the query string in order to make request. Once we reach the pure data, we append them on body.
